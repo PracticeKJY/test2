@@ -43,26 +43,29 @@ body {
 
 .main {
   background: lightgreen;
-  height: 50vh;
   display: flex;
-  flex-direction: row;
-  
+  flex-flow: row nowrap;
+  justify-content:space-between;
+  align-items: flex-start;
+  padding:0 30px;
+  min-height: 450px;
 }
+
 
 .group1 {
   background-color: violet;
   width: 250px;
-  float:left;
+  
 }
 
 .group2 {
   background-color: salmon;
-  width: 300px;
+  width: 380px;
 }
 
 .group3 {
   background-color: gold;
-  width: 190px;
+ width: 190px;
 }
 
 
