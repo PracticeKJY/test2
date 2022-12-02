@@ -6,9 +6,16 @@
 *, *::before, *::after{
   box-sizing: border-box;
 }
+/* 링크 스타일 */
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
 
 /* 본문 스타일 */
 body {
+  color : #212121;
   background-color: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, 
   system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
@@ -44,9 +51,34 @@ body {
 
 /* 텍스트 링크 모음 */
 .member{
-  background-color: aqua;
+  /* bac  kground-color: aqua; */
+  color:green;
+  font-weight: 700;
+  text-align: right;
+  padding :4px 0;
+  
+}
+/* display:inline을 줄 경우, 각 코드의 엔터누른것들도 공백문자로 인식되서 생성된대. 
+  flex나 float은 block단위이기 때문에, 공백문자로 인식안한거구.
+  inline은 남은 width가 그려야될 width보다 작을 때 다음칸으로 잘려서넘어가는데,
+  inline-block은 부족한다면, 다음줄로 넘어가서 그리는 차이점이 있어.
+  공백없앨라면, 여러가지방법이있는데 실습에선
+  1.부모는 font-size: 0; 자식한텐 font-size:16;을 주는 방법 (=상속을 이용한 방법)
+  2. span의 class인 divider을 이용하여, margin을 주는 방법.
+  3.
+  꿀팁 멤버에 4px주고 멤버.a에 6px 준 이유: 모바일같은 작은 환경에서의 오작동을 막아주기위해.
+*/
+.member li{
+  /* background-color: pink; */
+  display: inline-block;
+  
 }
 
+.member a{
+  background-color: coral;
+  padding:6px 10px;
+  display: inherit;
+}
 
 
 /* 비주얼 */
