@@ -28,9 +28,11 @@ a{
 
 
 /* 본문 스타일 */
+
 body {
   color : #212121;
-  background-color: #ccc;
+  background: #ccc linear-gradient(to bottom, #ccc 0%,
+   #eee 35%, #fff 100%);
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, 
   system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
   "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
@@ -115,13 +117,36 @@ transform: translateX(10px);
 }
 
 .menu {
+  /* border-top: 도 단축명령어?, currentcolor ( inherit과 비슷한 의미의 예약어) */
+  border-top: 2px solid currentColor;
   background-color: orangered;
   background-image: linear-gradient(to bottom,
   #ef9126 0%,
   #e85e2c 35%,
   #e85e2c 70%,
   #ef9126 100%);
+  border-radius: 0 0 5px 5px;
+  display: flow-root;
+    
+}  
+/* row방향으로 하는 방법이 float, inline-block, flex가 있찌.. */
+.menu-item:first-child{
+  margin-left:230px;
 }
+
+
+
+.menu-item{
+  background : aqua;
+  float:left;
+}
+
+.sub-menu{
+  background: pink;
+  position: absolute;
+  display:none;
+}
+
 
 
 
@@ -130,6 +155,23 @@ transform: translateX(10px);
   background-color: orange;
   height:10vh;
 }
+
+.navigation{
+  padding-bottom: 80px;
+}
+/* 
+background-color ㅡ> 배경색
+background-image ㅡ> 배경 이미지
+background-repeat ㅡ> 배경/이미지 반복
+background-position ㅡ> 배경/이미지 위치
+background-attachment ㅡ>배경/이미지 고정여부
+background-size ㅡ>배경/이미지 크기조절
+background ㅡ> 공백으로 값과 값  (margin, padding과 같은 숏탠드? 여튼 단축표기법)
+ */
+
+
+
+
 /* 메인 */
 .main{
   background-color: lightseagreen;
@@ -179,7 +221,8 @@ transform: translateX(10px);
 }
 /* 푸터 */
 .footer{
-  background-color:gray;
+  background: #ccc linear-gradient(to bottom, #ccc 0%,
+  #eee 35%, #efefef 60%, #fff 100%);
 }
 .footer-inner{
   height: 15vh;
