@@ -126,18 +126,30 @@ transform: translateX(10px);
   #e85e2c 70%,
   #ef9126 100%);
   border-radius: 0 0 5px 5px;
-  display: flow-root;
-    
+  height: 47px;    
 }  
 /* row방향으로 하는 방법이 float, inline-block, flex가 있찌.. */
 .menu-item:first-child{
   margin-left:230px;
 }
 
+.menu-button{
+  border: 0;
+  background: transparent;
+  padding: 0 23px;
+  line-height: 45px;
+  /* line-height = 줄 높이 font-size = 폰트 크기 */
+  border-left: 2px solid #FFF;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
+  /* text-shadow = 글자에 그림자를 만들어주는 것처럼 보이는 명령어 */
+}
+
 
 
 .menu-item{
-  background : aqua;
   float:left;
 }
 
