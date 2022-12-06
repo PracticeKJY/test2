@@ -1,11 +1,25 @@
 @import url(./normalize.css);
 @import url(./reset.css);  
 
+/* 숨김 콘텐츠 */
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: polygon(0 0  , 0 0, 0 0);
+  overflow:hidden;
+  /* overflow는 넘어가는 컨텐츠를 숨길지 어떻게할지 결정해주는 명령어. */
+}
 
 /* 기본 스타일 */
 *, *::before, *::after{
   box-sizing: border-box;
 }
+
+html {
+  font-size: 10px;
+}
+
 /* 링크 스타일 */
 a{
   color:inherit;
@@ -21,7 +35,8 @@ body {
   system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", 
   "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   font-weight: 500;
-  
+  font-size:1.4rem;
+  /* css의 단위 em(부모기준),rem(루트(=html)기준) */
 }
 
 /* 레이아웃 */
@@ -36,10 +51,13 @@ body {
 .header{
   background-color: #fff;
   padding: 0 30px;
-  height: 15vh;
+  
   border-radius: 0 0 15px 15px;
   position: relative;
 }
+
+
+
 /* 로고 */
 .logo{
   
@@ -52,11 +70,16 @@ body {
 /* 텍스트 링크 모음 */
 .member{
   /* bac  kground-color: aqua; */
-  color:green;
-  font-weight: 700;
+  
+  
   text-align: right;
   padding :4px 0;
-  
+    /* position 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
+   /* position: relative;
+    right: -10px;*/
+    /* transform 속성을 활용하여 .member 영역을 오른쪽으로 10px 만큼 이동하기 */
+transform: translateX(10px);
+
 }
 /* display:inline을 줄 경우, 각 코드의 엔터누른것들도 공백문자로 인식되서 생성된대. 
   flex나 float은 block단위이기 때문에, 공백문자로 인식안한거구.
@@ -75,10 +98,31 @@ body {
 }
 
 .member a{
-  background-color: coral;
+  
   padding:6px 10px;
   display: inherit;
+  text-transform: uppercase;  
 }
+
+/* 마지막 li 요소에 포함된 a 요소를 선택하여 오른쪽 padding 값을 0으로 재정의 하는 방법 */
+/* .member li:last-child a { 
+  padding-right: 0;
+}*/
+
+
+.divider {
+  margin-right: 4px;
+}
+
+.menu {
+  background-color: orangered;
+  background-image: linear-gradient(to bottom,
+  #ef9126 0%,
+  #e85e2c 35%,
+  #e85e2c 70%,
+  #ef9126 100%);
+}
+
 
 
 /* 비주얼 */
@@ -105,12 +149,13 @@ body {
 } */
 .group{
   margin:0 15px;
+  float : left;
 }
 
 .group1{
   background-color: violet;
   width: 250px;
-  float: left;
+  
   /* position: relative; 
   /* relative 현재자신을 기준으로 움직이는것. */
   /* left: -100px; */
@@ -118,12 +163,11 @@ body {
 .group2{
   background-color: salmon;
   width: 380px;
-  float: left;
-}
+} 
+
 .group3{
   background-color: gold;
   width: 190px;
-  float:left;
 }
 
 
