@@ -50,8 +50,9 @@ body {
            내가 뭔가 빠뜨리고있는게 있는가? */
   /* background-position = 좌표이동을 시켜주는친구 */
   /* repeat = 반복되는 방향을 바꿔주는 친구 */
-  background: url(./images/bg_flower.png) no-repeat 50px 0,
+  background: url(./images/bg_flower.png) no-repeat 100px 0,
     yellow linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%) repeat 0 0;
+  /* 단축명령어로 수정한 것. */
   }
 
 /* 레이아웃 */
@@ -251,7 +252,15 @@ body {
     
   }
 }
-
+@keyframes fadeEffect{
+  0%{
+    opacity: 1;
+  }
+  
+  100%{
+    opacity: 0;
+  }
+}
 
 
 
@@ -262,17 +271,46 @@ body {
   position: relative;
 }
 
+.visual::before, .visual::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* animation-name: fadeEffect;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  animation: fadeEffect 2000ms infinite alternate;
+}
+.visual::before{
+  
+  background-image: url(./images/ani_flower_01.png), url(./images/ani_flower_02.png);
+  background-repeat: no-repeat;
+  background-position: 0px -10px, 600px 0px;
+
+}
+.visual::after{
+  background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+  background-repeat: no-repeat;
+  background-position: 300px 0px, 800px 0px;
+  animation-delay: 1000ms;
+}
+
 
 .visual-text{
   font-family: Georgia, 'Times New Roman', Times, serif;
   animation-name: moveEffect;
-  animation-duration: 2000ms;
+  animation-duration: 400ms;
   animation-fill-mode: forwards;
   /* display:inline-block; */
   animation-timing-function: ease-in-out;
-  position:absolute;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  position:relative;
   /* timing-function = 애니메이션효과를 추가로줌! */
-  
+  z-index: 1;
 }
 
 
