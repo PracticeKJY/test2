@@ -3,7 +3,7 @@
 @import url(./fontello.css);
 
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -222,6 +222,9 @@ body {
   content: '\e800';
   
 }
+.sub-menu a:hover, .sub-menu a:focus{
+  color:red;
+}
 
 .sub-menu a{
   
@@ -229,9 +232,6 @@ body {
   padding: 8px 4px;
 } 
 
-.sub-menu a:hover, .sub-menu a:focus{
-  color:red;
-}
 
 
 /* 비주얼 */
@@ -315,10 +315,11 @@ body {
 
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
+  background: #fff;
+  min-height: 50vh;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
 }
 
 .group {
@@ -327,9 +328,116 @@ body {
 }
 
 .group1 {
-  background-color: violet;
   width: 250px;
 }
+
+.login{
+  background: 
+  linear-gradient(
+     to left,
+    #e8852e 0%,
+    #f16e4d 50%,
+    #e85e2c 70%, 
+    #ed552f 100%);
+  padding: 10px;
+  box-shadow: 5px 5px 0 0 #aaa;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.login-title{
+  color:yellow;
+  font-size: 15px;
+  text-indent: 10px;
+  font-weight: 700;
+  /* margin: 10px; */
+  /* 실수1.여기에 마진을 선언해서 계속 아래로 내려간듯 보였던거야. */
+}
+
+.login-form{
+  background-color: #fff;
+  margin-top:10px;
+  /* 마진탑주니까 합쳐진다 왜냐??? */
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.sign{
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px;
+}
+
+
+.user-email, .user-pw{
+  /* background: aqua; */
+  margin: 4px 0 ;
+}
+
+ 
+.login-form fieldset{
+  position:relative;
+  border-bottom: 2px solid #aaa;
+  padding-bottom: 5px;
+}
+
+.login-form label{
+    /* background: pink; */
+    display: inline-block;
+    width: 55px;
+}
+.login-form input{
+  width: 90px;
+  height: 24px;
+}
+
+/* 인풋길이 줄라고 width, height를 줄까? */
+
+
+.login-button{
+  position:absolute;
+  top: 3px;
+  left: 160px;
+  width: 50px;
+  height: 53px;
+  font-size:13px;
+  color:#fff;
+  background: #e85e2c;
+  border: 0;
+  padding: 0;
+  border-radius: 5px;
+} 
+
+.sign li{
+  display:inline-block;
+  margin: 4px 0 0 0;
+
+}
+
+.sign a::before{
+  content: '\e803';
+  font-family: fontello;
+  color: orangered;
+  margin-right: 4px;
+  
+    
+}
+.sign a{
+  display:inline-block;
+  font-size:12px;
+  padding: 4px 8px;
+  letter-spacing :-1px; 
+}
+
+
+.sign a:hover::before, .sign a:focus::before{
+  content: '\e802';
+  
+}
+.sign a:hover, .sign a:focus{
+  color:red;
+}
+
+
 .group2 {
   background-color: salmon;
   width: 380px;
