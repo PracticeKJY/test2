@@ -50,7 +50,7 @@ body {
            내가 뭔가 빠뜨리고있는게 있는가? */
   /* background-position = 좌표이동을 시켜주는친구 */
   /* repeat = 반복되는 방향을 바꿔주는 친구 */
-  background: url(./images/bg_flower.png) no-repeat 100px 0,
+  background: url(./images/bg_flower.png) no-repeat 30px 0,
     yellow linear-gradient(to bottom, #ccc 0%, #eee 35%, #fff 70%, #fff 100%) repeat 0 0;
   /* 단축명령어로 수정한 것. */
   }
@@ -380,7 +380,7 @@ body {
  
 .login-form fieldset{
   position:relative;
-  border-bottom: 2px solid #aaa;
+  border-bottom: 1px solid #aaa;
   padding-bottom: 5px;
 }
 
@@ -420,7 +420,7 @@ body {
     
 }
 .sign a{
-  display:inline-block;
+  display:block;
   font-size:13px;
   padding: 4px;
   letter-spacing :-1px; 
@@ -435,6 +435,36 @@ body {
   color:red;
 }
 
+.validation-list{
+  margin-top:24px;
+  
+}
+
+.validation-list li{
+  
+  margin-top: 10px;
+  background: 
+  no-repeat 20px 10px, linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  padding: 10px 10px 8px 15px;
+  
+}
+
+.validation-list a{
+  display:block;
+}
+
+
+.validation a::before{
+  content: url(./images/validation_icon.png);
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.validation-list a:hover, .vaildation-list a:focus{
+  color:red;
+}
 
 .group2 {
   background-color: salmon;
