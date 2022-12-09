@@ -358,13 +358,17 @@ body {
   margin-top:10px;
   /* 마진탑주니까 합쳐진다 왜냐??? */
   border-radius: 5px 5px 0 0;
-  padding: 10px 10px 0 10px;
+  padding: 4px 10px 0 10px;
 }
 
 .sign{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   background-color: #fff;
   border-radius: 0 0 5px 5px;
-  padding: 4px 10px;
+  padding: 4px 10px 4px 10px;
+  font-size:12px;
 }
 
 
@@ -407,12 +411,6 @@ body {
   border-radius: 5px;
 } 
 
-.sign li{
-  display:inline-block;
-  margin: 4px 0 0 0;
-
-}
-
 .sign a::before{
   content: '\e803';
   font-family: fontello;
@@ -423,8 +421,8 @@ body {
 }
 .sign a{
   display:inline-block;
-  font-size:12px;
-  padding: 4px 8px;
+  font-size:13px;
+  padding: 4px;
   letter-spacing :-1px; 
 }
 
