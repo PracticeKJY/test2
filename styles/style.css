@@ -467,13 +467,237 @@ body {
 }
 
 .group2 {
-  background-color: salmon;
+  /* background-color: salmon; */
   width: 380px;
 }
+
+
+
+/* 검색 폼 */
+.search-form {
+background: #ccc linear-gradient(to bottom, #ccc, #eee );
+border-radius: 10px 10px 0 0;
+padding: 15px 15px 10px 15px;
+border:1px solid #aaa;
+  /* width: 300px; */
+}
+/* 내코드랑 비교해서 안준거:border 테두리속성 */
+
+/*  search-form fieldset 필드셋엔 레이아웃작업 안하는걸 추천함. */
+
+
+.search-form-inner {
+  /* background-color: yellow; */
+  display:flex;
+  flex-wrap: nowrap;
+}
+/* 내코드랑 비교해서 안준거:줄바꿈 */
+
+.form-group {
+  /* background-color: pink; */
+  padding-right:10px;
+  display:flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+/* 내코드랑 비교해서 안준거: flex효과, 줄바꿈효과, align-items효과,  */
+
+.form-group-label {
+  /* background-color: lime; */
+  margin-right:10px;
+  white-space: nowrap;
+}
+/* 내코드랑 비교해서 안준거: 공백효과, 그리고 패딩left가아닌 margin right를 줌 */
+/* white-space 대신 flex니까 flex-shrink=0 를 줘도 됨.  */
+
+
+.form-group-input {
+  border:1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding:1px 1px 1px 5px;
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%; 
+}
+/* 내코드랑 비교해서 안준거: 테두리, radius효과, 길이24px 마진안주고 패딩줌. flex-grow */
+
+
+.search-button {
+ background-color: #000;
+ color:#fff;
+ padding: 0px 9px 0px 9px;
+ border-radius: 3px;
+ font-size: 1.3rem;
+ border:0;
+ height: 24px;
+ white-space: nowrap;
+}
+/* 내코드랑 비교해서 안준거: 공백효과, 길이, 보더:0 */
+
+.board{
+  /* background-color: yellow; */
+  position:relative;
+}
+
+
+
+.tab-list{
+  /* background-color: lime;   */
+  display:flex;
+  flex-flow: nowrap;
+}
+
+.tab{
+  border: 1px solid #aaa;
+  background-color:  #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 10px;
+  color: #666;
+}
+
+.is-select.tab{
+  background-color:#fff;
+  color:red;
+  border-color: currentColor currentColor currentColor;
+}
+
+/* 내가 못했던거. tab,tab-list,is-select.tab, .board-list li,a접근 */
+
+
+.tab-panel{
+  display:none;
+  /* background-color: pink; */
+  margin-top:15px;
+}
+
+.board-list{
+  /* background-color: orange; */
+}
+
+.board-list li{
+  /* background-color: hotpink; */
+  margin-top:10px;
+  display: flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+}
+
+.board-list a{
+  flex-grow:1;
+  /* background-color: salmon; */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.board-list time{
+  flex-shrink:0;
+  margin-left:10px;
+  
+}
+
+
+
+.board-more{
+  /* background-color: aqua; */
+  position:absolute;
+  right: -8px;
+  top: -8px;
+  padding:8px;
+  /* 패딩을 준 이유: 키보드로 접근했을 때 좀 더 넓은 영역을 주기 위해서. */
+}
+
+.icon-plus::before{
+  color:hsla(110,50%,30%,1)
+}
+
+
+.is-select.tab-panel {
+  display: block;
+}
+
+
+
+
 .group3 {
-  background-color: gold;
+  /* background-color: gold; */
   width: 190px;
 }
+
+
+
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+.term-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+.term-list {
+  margin-top: 10px;
+  /* background-color: yellow; */
+}
+
+.term-list div {
+  /* background-color: pink; */
+  margin-top: 10px;
+  display: flow-root;
+}
+
+
+
+.term-list-subject,
+.term-list-brief {
+  float: right; 
+  width: 145px;
+}
+
+.term-list-subject {
+  color: #296897;
+  font-weight: 500;
+}
+
+.term-list-thumbnail {
+  /* background-color: purple; */
+  float: left;
+}
+
+.term-list-brief {
+  /* background-color: coral; */
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+.cross .term-list-subject,
+.cross .term-list-brief {
+  float: left;
+}
+
+.cross .term-list-thumbnail {
+  float: right;
+  
+}
+
+.cross .term-list-thumbnial img{
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+
 
 /* 슬로건 */
 .slogan {
