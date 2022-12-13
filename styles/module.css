@@ -1,0 +1,11 @@
+.gradient-effect{
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+
+
+.accent-color{
+  color: #ed552f;
+}

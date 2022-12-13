@@ -1,6 +1,7 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 @import url(./fontello.css);
+@import url(./module.css);
 
 /* 숨김 콘텐츠 */
 .a11y-hidden, legend {
@@ -466,167 +467,6 @@ body {
   color:red;
 }
 
-.group2 {
-  /* background-color: salmon; */
-  width: 380px;
-}
-
-
-
-/* 검색 폼 */
-.search-form {
-background: #ccc linear-gradient(to bottom, #ccc, #eee );
-border-radius: 10px 10px 0 0;
-padding: 15px 15px 10px 15px;
-border:1px solid #aaa;
-  /* width: 300px; */
-}
-/* 내코드랑 비교해서 안준거:border 테두리속성 */
-
-/*  search-form fieldset 필드셋엔 레이아웃작업 안하는걸 추천함. */
-
-
-.search-form-inner {
-  /* background-color: yellow; */
-  display:flex;
-  flex-wrap: nowrap;
-}
-/* 내코드랑 비교해서 안준거:줄바꿈 */
-
-.form-group {
-  /* background-color: pink; */
-  padding-right:10px;
-  display:flex;
-  flex-wrap: nowrap;
-  align-items: center;
-}
-/* 내코드랑 비교해서 안준거: flex효과, 줄바꿈효과, align-items효과,  */
-
-.form-group-label {
-  /* background-color: lime; */
-  margin-right:10px;
-  white-space: nowrap;
-}
-/* 내코드랑 비교해서 안준거: 공백효과, 그리고 패딩left가아닌 margin right를 줌 */
-/* white-space 대신 flex니까 flex-shrink=0 를 줘도 됨.  */
-
-
-.form-group-input {
-  border:1px solid #aaa;
-  border-radius: 3px;
-  height: 24px;
-  padding:1px 1px 1px 5px;
-  flex-grow: 1;
-  min-width: 0;
-  max-width: 100%; 
-}
-/* 내코드랑 비교해서 안준거: 테두리, radius효과, 길이24px 마진안주고 패딩줌. flex-grow */
-
-
-.search-button {
- background-color: #000;
- color:#fff;
- padding: 0px 9px 0px 9px;
- border-radius: 3px;
- font-size: 1.3rem;
- border:0;
- height: 24px;
- white-space: nowrap;
-}
-/* 내코드랑 비교해서 안준거: 공백효과, 길이, 보더:0 */
-
-.board{
-  /* background-color: yellow; */
-  position:relative;
-}
-
-
-
-.tab-list{
-  /* background-color: lime;   */
-  display:flex;
-  flex-flow: nowrap;
-}
-
-.tab{
-  border: 1px solid #aaa;
-  background-color:  #ccc;
-  border-radius: 5px 5px 0 0;
-  padding: 5px 10px;
-  color: #666;
-}
-
-.is-select.tab{
-  background-color:#fff;
-  color:red;
-  border-color: currentColor currentColor currentColor;
-}
-
-/* 내가 못했던거. tab,tab-list,is-select.tab, .board-list li,a접근 */
-
-
-.tab-panel{
-  display:none;
-  /* background-color: pink; */
-  margin-top:15px;
-}
-
-.board-list{
-  /* background-color: orange; */
-}
-
-.board-list li{
-  /* background-color: hotpink; */
-  margin-top:10px;
-  display: flex;
-  flex-flow: nowrap;
-  justify-content: space-between;
-}
-
-.board-list a{
-  flex-grow:1;
-  /* background-color: salmon; */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-
-.board-list time{
-  flex-shrink:0;
-  margin-left:10px;
-  
-}
-
-
-
-.board-more{
-  /* background-color: aqua; */
-  position:absolute;
-  right: -8px;
-  top: -8px;
-  padding:8px;
-  /* 패딩을 준 이유: 키보드로 접근했을 때 좀 더 넓은 영역을 주기 위해서. */
-}
-
-.icon-plus::before{
-  color:hsla(110,50%,30%,1)
-}
-
-
-.is-select.tab-panel {
-  display: block;
-}
-
-
-
-
-.group3 {
-  /* background-color: gold; */
-  width: 190px;
-}
-
-
 
 /* 웹 관련 용어 */
 .term {
@@ -693,6 +533,351 @@ border:1px solid #aaa;
 
 
 
+.group2 {
+  /* background-color: salmon; */
+  width: 380px;
+}
+
+.search-form{
+  /* background-color: pink; */
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  padding:18px 16px 10px 24px;
+  border-radius: 14px 14px 0 0;
+  border:1px solid #aaa;
+}
+
+.search-form-inner{
+  display:flex;
+  flex-flow: nowrap;
+}
+
+
+.form-group{
+  /* background-color: yellow; */
+}
+
+.form-group-label{
+  /* background-color: hotpink; */
+  margin-right:10px;
+  white-space: nowrap;
+}
+
+.form-group-input{
+  margin: 0 5px;
+  height:24px;
+  border-radius: 3px;
+  border: 1px solid #aaa;
+
+}
+.search-button{
+  background-color: #000;
+  color:#fff;
+  padding: 0px 9px 0px 9px;
+  height: 24px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 1.3rem;
+}
+
+
+.board{
+  /* background-color: purple; */
+  position: relative;
+}
+ 
+.tab{
+  background-color: silver;
+  border: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+  padding:6px 13px 6px 13px;
+}
+
+.is-select.tab{
+  color:red;
+  background-color: #fff;
+  border-color: currentColor currentColor currentColor;
+}
+
+.board-more{
+  position: absolute;
+  top:-8px;
+  right:-8px;
+  padding:8px;
+}
+
+.board-list li{
+  /* background-color: yellow; */
+  display:flex;
+  flex-flow: nowrap;
+  justify-content: space-between;
+  margin-top:4px;
+}
+
+.board-list a{
+  /* background-color: aqua; */
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top:10px;
+}
+
+.board-list time{
+  /* background-color: hotpink; */
+  margin-top:10px;
+  /* margin-left: -10px; */
+  flex-shrink: 0;
+}
+
+
+
+.icon-plus::before{
+  color:green;
+}
+
+.tab-list{
+  /* background-color: pink; */
+  display:flex;
+  margin-top:24px;
+}
+
+.tab-panel{
+  /* background-color: orange; */
+  display:none;
+}
+
+.is-select.tab-panel{
+  display:block;
+}
+
+
+.news{
+  margin-top:20px;
+  position:relative;
+}
+
+.news-more{
+  position: absolute;
+  top:-8px;
+  right:-8px;
+  padding:8px;
+  /* absolute나 float들은 bfc를 생성하기 때문에, 다 block의 성격을 가지고있어.
+   width,height들이 다 auto로 설정되서, 보이는건 inline처럼보이지만 속으면안댄다구 */
+}
+
+
+
+
+.news-link{
+  display: block;
+
+}
+
+.news-title{
+  /* background-color: pink; */
+  font-size:15px;
+  color: #e85e2c;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.news-link::before{
+  border-top: 1px solid #ccc;
+  content: "";
+  display:block;
+}
+
+
+/* .news-item::before{
+  border-top: 1px solid #ccc;
+  content: "";
+  display:block;
+} */
+
+.news-item{
+  /* background-color: orange; */
+  position:relative;
+  padding-left:130px; 
+  margin-top:20px;
+  /* 패딩왼쪽주는게 핵심아이디어네. */
+}
+
+.news-item-title{
+  /* background-color: aqua; */
+  /* position:absolute; */
+  right:0;
+  /* transform: translateX(2px); */
+  margin-bottom:7px;
+  font-weight: 500;
+}
+
+.news-item-date{
+
+}
+
+.news-item-brief{
+ margin-top:10px;
+ line-height: 20px;
+ /* background-color:yellow; */
+}
+
+
+.news-item-thumbnail{
+  /* background-color: hotpink; */
+  position:absolute;
+  text-align: center;
+  top:0;
+  left:0;
+
+}
+
+.news-item-thumbnail img{
+  box-shadow: 0 15px 10px 5px #eee;
+  /* 스프레이효과 */
+}
+.news-item-thumbnail figcaption{
+  margin-top:14px;
+}
+
+
+.group3 {
+  /* background-color: gold; */
+  width: 190px;
+}
+
+
+/* 신규이벤트 및 관련 사이트 */
+
+
+.event{
+  /* background-color: pink; */
+  border-bottom: 1px solid #aaa;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:  space-between;
+}
+
+.event-title{
+  display: inline-block;
+}
+
+.event-button-wrapper{
+  /* background-color: yellow; */
+  overflow:hidden;
+  height: 20px;
+  display:flex;
+  flex-flow:row nowrap;
+  align-items: center;
+  gap:13px;
+  
+  /* clip-path: polygon(0 0, 0 0, 0 0); */
+  }
+
+#eventDetail{
+  /* background-color: pink; */
+  clear:both;
+  margin-top:0px;
+}
+
+
+
+
+/* IR 기법 -> Image Replacement (텍스트를 안보이게하고 이미지를 대신 보이게하는 방법 */
+
+  .event-button{
+    /* background-color: pink; */
+    width: 19px;
+    height: 20px; 
+    border:0;
+    padding: 18px 0 0 0;
+    background: url(./images/back_forward.png) no-repeat;
+  }
+
+.event-button:focus{
+  outline-offset: -2px;
+}
+
+ .event-button-next{
+  background-position: -36px 0;
+}
+
+
+.event-title{
+  /* background-color: yellow; */
+  font-size:16px;
+  font-weight: 500;
+  
+}
+
+.event-thumbnail{
+  box-shadow: 7px 7px 0 0 #ccc;
+  /* border: 1px solid #aaa; */
+}
+
+.event-thumbnail, .event-brief{
+  margin:10px 0;
+}
+
+
+
+
+.event-brief{
+  line-height: 1.5;
+}
+
+
+
+.related{
+  margin-top:10px;
+}
+
+
+.related-list{
+  /* padding-top:10px; */
+  margin-top:10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  overflow:hidden;
+  height: 27px;
+  padding:0;
+  transition: height 400ms 0ms, padding 400ms 400ms;
+
+  /* transition-property: background-color, border-radius;
+  transition-duration: 2000ms;
+  transition-delay: 0ms, 2000ms;
+  transition-timing-function: ease-in-out; */
+  /* transition: background-color 2000ms 0ms ease-in-out, border-radius 2000ms 2000ms ease-in-out; */
+  /* property: 바뀌게하고싶은 속성이름을 알려주면댐 + duration이랑 같이 세트메뉴 */
+  /* 배경색외에 다른것도 변하게할려면, */
+}
+
+
+.related-list li{
+  height:25px;
+  /* display:flex;
+  flex-flow: row nowrap;
+  align-items: center; */
+  line-height: 1.8;
+}
+
+.related-list a{
+  flex-grow:1;
+  padding: 0 10px;
+}
+
+
+
+
+
+
+
+/* transition : a->b로갈때 서서히 효과를 주는 애니메이션 */
+
+.related-list:hover, .relate-list:focus{
+     height: 147px;
+     padding: 10px 0;
+}
 
 
 
