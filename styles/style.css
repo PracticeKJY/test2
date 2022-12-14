@@ -9,15 +9,20 @@
   box-sizing: border-box;
 }
 
-a{
-  color : inherit;
+ html{
+  font-size:10px;
+}
+
+/* 링크 스타일 */
+a {
+  color: inherit;
   text-decoration: none;
 }
 
-
 /* 본문 스타일 */
 body {
-  background: #ffc;
+  color: #212121;
+  background: #ccc;
   font-family: "Pretendard Variable", Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
     "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
@@ -38,16 +43,15 @@ body {
 .header {
   background: #fff;
   padding: 0 30px;
-  height: 15vh;
   border-radius: 0 0 15px 15px;
 }
 
 .member {
-  background-color: pink  ;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
+  background-color: pink;
 }
+
+
+
 /* 겹침 Cascading */
 /* 우선순위 규칙 */
 /* li (Type Selector) - 1점 */
@@ -76,60 +80,131 @@ body {
 }
 */
 
-.member a {
-  text-transform: uppercase;
-}
+
 
 
 /* 비주얼 */
 .visual {
-  background: orange;
-  height: 10vh;
+  height: 120px;
 }
 /* 메인 */
 .main {
-  background: lightgreen;
-  border-top: 1px solid red;
-  /* min-height: 450px; */
-  position: absolute;
+  background: #fff;
+  min-height: 450px;
+  display: flow-root;
+  padding: 30px 15px; 
 }
 
 .group {
-  height: 100px;
+  float: left;
+  margin: 0 15px;
 }
+
 .group1 {
-  background-color: violet;
   width: 250px;
-  float: right;
 }
 
 .group2 {
-  background-color: salmon;
   width: 380px;
-  float: right;
 }
 .group3 {
-  background-color: gold;
   width: 190px;
-  float: right;
 }
+
+
+.gradient-effect{
+  border: 1px solid #aaa;
+  border-radius:5px;
+  padding:10px;
+  background: #ccc linear-gradient(to bottom, #ccc , #eee );
+
+}
+
+
+.text-xl{
+  font-size:1.5rem;
+  font-weight: 700;
+}
+
+.accent-color{
+  color:#a52a2a;
+}
+
+
+.margin-top-default{
+  margin-top:30px;
+}
+
+
+.event{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.event-button-wrapper{
+  /* background-color: yellow; */
+  /* overflow: hidden;   */
+  /* height: 24px; */
+  /* padding: 2px;  */
+  display: flex;
+  flex-flow:row nowrap;
+  align-items: flex-start; 
+  gap:5px; 
+  /* flex-flow, align-item, gap은 flex가없으면 의미없는 친구들 */
+}
+
+.event-button{
+  background: url(./images/back_forward.png) no-repeat;
+  border: 0;
+  /* padding: 18px 0 0 0; */
+  width: 20px;
+  height: 20px;
+  text-indent: -9999px;
+    
+  /* indent는 block에게 줄 수있는데, button은 inline-block이라 줄 수 있다 */
+  /*  */
+}
+
+.event-button-next{
+  /* transform: translateX(20px); */
+  background-position: 100% 0;
+}
+
+
+
+
+.event-thumbnail, .event-brief{
+  margin: 10px 0;
+}
+
+.event-thumbnail img{
+  border:1px solid aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+
+
+
+/* 인기사이트 */
+.favorite {
+  }
+
+
+
+
+
 
 /* 슬로건 */
 .slogan {
   background: skyblue;
-  height: 10vh;
   clear: both;
 }
 /* 푸터 */
 .footer {
   background: gray;
-  width: 940px;
-  margin: 0 auto;
 }
 .footer-inner {
   background: silver;
-  height: 15vh;
-  position: relative;
-  top: -10px;
-  left: -10px;
 }
